@@ -766,6 +766,8 @@
   .product-name { font-size: 14px; }
   .product-body { padding: 12px; }
   .product-price { font-size: 15px; }
+  /* Prevent "Add to Cart" from wrapping to 2 lines on narrow cards */
+  .btn-cart { font-size: 11px; padding: 8px 6px; white-space: nowrap; }
 
   .why-section { padding: 50px 14px; }
   .why-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
