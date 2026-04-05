@@ -16,7 +16,7 @@ const PRODUCTS = [
     tagColor: "#b5451b",
     desc: "Geometric ikat weaves — bold patterns, vibrant hues.",
     accent: "#c2440f",
-    image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=400&q=80",
+    image: "https://images.unsplash.com/photo-1610276580899-53d1af1a1359?q=80&w=453&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const PRODUCTS = [
     tagColor: "#7b5ea7",
     desc: "Lustrous silk with zari border — perfect for weddings.",
     accent: "#7b3fa0",
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=400&q=80",
+    image: "https://images.unsplash.com/photo-1698657169232-f337f50d1ff5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const PRODUCTS = [
     tagColor: "#1a6a40",
     desc: "Authentic Santipur handloom — breathable and elegant.",
     accent: "#1a6a40",
-    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80",
+    image: "https://images.unsplash.com/photo-1610189000544-1f0885c4bbeb?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const PRODUCTS = [
     tagColor: "#c2185b",
     desc: "Contemporary designs blending tradition with modern style.",
     accent: "#c2185b",
-    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=400&q=80",
+    image: "https://images.unsplash.com/photo-1694243382431-90d1934d6c3c?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 5,
@@ -64,7 +64,7 @@ const PRODUCTS = [
     tagColor: "#8b5e2d",
     desc: "Classic Bengal tant — lightweight with temple border work.",
     accent: "#8b5e2d",
-    image: "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?auto=format&fit=crop&w=400&q=80",
+    image: "https://images.unsplash.com/photo-1610189337543-1c5d8e64f574?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 6,
@@ -76,7 +76,7 @@ const PRODUCTS = [
     tagColor: "#2c5f8a",
     desc: "UNESCO heritage — finest muslin with intricate motifs.",
     accent: "#2c5f8a",
-    image: "https://images.unsplash.com/photo-1610030468706-9a6dbad49b0a?auto=format&fit=crop&w=400&q=80",
+    image: "https://images.unsplash.com/photo-1610189026297-df356264479c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -84,10 +84,10 @@ const PRODUCTS = [
    HERO GRID — saree / model images
 ───────────────────────────────────────────── */
 const HERO_GRID = [
-  { label: "Panchampally", img: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=300&q=75" },
-  { label: "Pure Silk", img: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=300&q=75" },
-  { label: "Cotton Tant", img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=300&q=75" },
-  { label: "Designer", img: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=300&q=75" },
+  { label: "Panchampally", img: "https://images.unsplash.com/photo-1710440189404-e95fabead2a3?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { label: "Pure Silk", img: "https://plus.unsplash.com/premium_photo-1669977749936-1343d0b0b4d9?q=80&w=474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { label: "Cotton Tant", img: "https://plus.unsplash.com/premium_photo-1720798650953-1bb37db7241c?q=80&w=449&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { label: "Designer", img: "https://images.unsplash.com/photo-1740674570259-a47d713a2976?q=80&w=419&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
 ];
 
 /* ─────────────────────────────────────────────
@@ -97,49 +97,49 @@ const HERO_GRID = [
 const SCROLLER_ITEMS = [
   {
     id: 1,
-    img: "https://images.unsplash.com/photo-1610030468706-9a6dbad49b0a?auto=format&fit=crop&w=340&q=80",
+    img: "https://images.unsplash.com/photo-1654764746225-e63f5e90facd?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "Kanjivaram Silk",
     label: "Wedding Special",
     color: "#c2185b",
   },
   {
     id: 2,
-    img: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=340&q=80",
+    img: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "Panchampally Ikat",
     label: "Bestseller",
     color: "#b5451b",
   },
   {
     id: 3,
-    img: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=340&q=80",
+    img: "https://images.unsplash.com/photo-1609748340041-f5d61e061ebc?q=80&w=409&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "Pure Silk Zari",
     label: "Premium",
     color: "#7b3fa0",
   },
   {
     id: 4,
-    img: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=340&q=80",
+    img: "https://images.unsplash.com/photo-1610030468706-9a6dbad49b0a?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "Designer Festive",
     label: "New Arrival",
     color: "#c2185b",
   },
   {
     id: 5,
-    img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=340&q=80",
+    img: "https://images.unsplash.com/photo-1610030469839-f909584b43f1?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "Cotton Handloom",
     label: "Daily Wear",
     color: "#1a6a40",
   },
   {
     id: 6,
-    img: "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?auto=format&fit=crop&w=340&q=80",
+    img: "https://images.unsplash.com/photo-1609748341932-f0206c09412b?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "Tant Classic",
     label: "Local Weave",
     color: "#8b5e2d",
   },
   {
     id: 7,
-    img: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=340&q=80",
+    img: "https://images.unsplash.com/photo-1609748340878-c690e3e4706b?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "Jamdani Heritage",
     label: "UNESCO Craft",
     color: "#2c5f8a",
