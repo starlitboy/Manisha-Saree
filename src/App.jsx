@@ -268,7 +268,7 @@ function SareeScroller() {
       <div className="scroller-heading">
         <p className="section-label">Our Lookbook</p>
         <h2 className="section-title scroller-title">Saree Collection — Full Drape</h2>
-        <p className="section-sub">Swipe or tap arrows — the draped saree is always centre-stage.</p>
+        <p className="section-sub"> Discover beautiful sarees from our collection.</p>
       </div>
 
       <div className="scroller-stage">
@@ -463,7 +463,8 @@ function FloatingShorts() {
 
   if (closed) return null;
 
-  const playlist = SHORTS_IDS.slice(1).join(",") + "," + SHORTS_IDS[0];
+  // The playlist parameter lists the videos that come AFTER the initial video.
+  const playlist = SHORTS_IDS.slice(1).join(",");
 
   const onPointerDown = (e) => {
     dragRef.current.isDragging = true;
@@ -492,7 +493,7 @@ function FloatingShorts() {
   };
 
   return (
-    <div 
+    <div
       className="floating-shorts"
       style={{ transform: `translate(${pos.x}px, ${pos.y}px)` }}
     >
@@ -502,7 +503,7 @@ function FloatingShorts() {
       <button className="shorts-close" onClick={() => setClosed(true)}>
         <Icon name="close" size={14} color="#000" />
       </button>
-      <div 
+      <div
         className="shorts-video-wrapper"
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
