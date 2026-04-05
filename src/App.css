@@ -799,3 +799,64 @@
   .scroller-card-btn    { font-size: 10px; padding: 5px 10px; gap: 4px; }
   .scroller-card-info   { padding: 12px 10px 14px; gap: 4px; }
 }
+
+/* ══════════════════════════════════════
+   FLOATING SHORTS
+══════════════════════════════════════ */
+.floating-shorts {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 120px;
+  background: black;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  z-index: 9999;
+  overflow: hidden;
+  border: 1px solid #fce4ec;
+  cursor: grab;
+}
+.floating-shorts:active { cursor: grabbing; }
+
+@media (max-width: 540px) {
+  .floating-shorts {
+    width: 90px;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+.shorts-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.shorts-btn-left {
+  right: auto;
+  left: 4px;
+}
+
+.shorts-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 177.77%; /* 16:9 inverted for shorts -> 9:16 ~ 177.77% */
+  background: #000;
+  touch-action: none;
+}
+.shorts-drag-overlay {
+  position: absolute; inset: 0; z-index: 2; cursor: inherit;
+}
+.shorts-video-wrapper iframe {
+  position: absolute; top:0; left:0; width:100%; height:100%;
+  pointer-events: none; /* Block clicks on iframe so wrapper handles dragging */
+}

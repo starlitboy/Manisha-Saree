@@ -196,7 +196,7 @@ const CARD_GAP = 16; // gap between cards in px
 function SareeScroller() {
   const [active, setActive] = useState(Math.floor(SCROLLER_ITEMS.length / 2));
   const viewportRef = useRef(null);
-  const [vpW, setVpW]   = useState(900);
+  const [vpW, setVpW] = useState(900);
   const [cardW, setCardW] = useState(200);
 
   /* ── Measure viewport & compute responsive card width ──
@@ -247,16 +247,16 @@ function SareeScroller() {
 
   const onDragMove = (e) => {
     if (!drag.current.on) return;
-    const x     = e.clientX ?? e.touches?.[0]?.clientX ?? 0;
+    const x = e.clientX ?? e.touches?.[0]?.clientX ?? 0;
     const delta = drag.current.startX - x;
-    const step  = cardW + CARD_GAP;
+    const step = cardW + CARD_GAP;
     if (delta > step * 0.3 && drag.current.startIdx < SCROLLER_ITEMS.length - 1) {
       drag.current.startIdx += 1;
-      drag.current.startX    = x;
+      drag.current.startX = x;
       setActive(drag.current.startIdx);
     } else if (delta < -step * 0.3 && drag.current.startIdx > 0) {
       drag.current.startIdx -= 1;
-      drag.current.startX    = x;
+      drag.current.startX = x;
       setActive(drag.current.startIdx);
     }
   };
@@ -300,9 +300,9 @@ function SareeScroller() {
             style={{ transform: `translateX(${offset}px)` }}
           >
             {SCROLLER_ITEMS.map((item, i) => {
-              const dist     = Math.abs(i - active);
+              const dist = Math.abs(i - active);
               const isActive = dist === 0;
-              const isSide   = dist === 1;
+              const isSide = dist === 1;
               return (
                 <div
                   key={item.id}
@@ -437,6 +437,85 @@ function ProductCard({ product, onUnlock }) {
             <Icon name="chat" size={18} color="white" />
           </a>
         </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   FLOATING SHORTS PLAYER
+───────────────────────────────────────────── */
+const SHORTS_IDS = [
+  "gBBhokcdK-Q",
+  "BmPfG-8taS4",
+  "Beg06RXfSJw",
+  "7k_VECbYtvM",
+  "5vDsk9QWHbI",
+  "i6pHl1ix9Ss",
+  "zx00GxeZIXE"
+];
+
+function FloatingShorts() {
+  const [closed, setClosed] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const [pos, setPos] = useState({ x: 0, y: 0 }); // offset from bottom right
+  const dragRef = useRef({ startX: 0, startY: 0, initialX: 0, initialY: 0, isDragging: false });
+
+  if (closed) return null;
+
+  const playlist = SHORTS_IDS.slice(1).join(",") + "," + SHORTS_IDS[0];
+
+  const onPointerDown = (e) => {
+    dragRef.current.isDragging = true;
+    dragRef.current.startX = e.clientX ?? e.touches?.[0]?.clientX ?? 0;
+    dragRef.current.startY = e.clientY ?? e.touches?.[0]?.clientY ?? 0;
+    dragRef.current.initialX = pos.x;
+    dragRef.current.initialY = pos.y;
+    e.target.setPointerCapture(e.pointerId);
+  };
+
+  const onPointerMove = (e) => {
+    if (!dragRef.current.isDragging) return;
+    const x = e.clientX ?? e.touches?.[0]?.clientX ?? 0;
+    const y = e.clientY ?? e.touches?.[0]?.clientY ?? 0;
+    const dx = x - dragRef.current.startX;
+    const dy = y - dragRef.current.startY;
+    setPos({
+      x: dragRef.current.initialX + dx,
+      y: dragRef.current.initialY + dy
+    });
+  };
+
+  const onPointerUp = (e) => {
+    dragRef.current.isDragging = false;
+    e.target.releasePointerCapture(e.pointerId);
+  };
+
+  return (
+    <div 
+      className="floating-shorts"
+      style={{ transform: `translate(${pos.x}px, ${pos.y}px)` }}
+    >
+      <button className="shorts-close shorts-btn-left" onClick={() => setIsMuted(!isMuted)}>
+        <Icon name={isMuted ? "volume_off" : "volume_up"} size={14} color="#000" />
+      </button>
+      <button className="shorts-close" onClick={() => setClosed(true)}>
+        <Icon name="close" size={14} color="#000" />
+      </button>
+      <div 
+        className="shorts-video-wrapper"
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+      >
+        <div className="shorts-drag-overlay" />
+        <iframe
+          src={`https://www.youtube.com/embed/${SHORTS_IDS[0]}?autoplay=1&mute=${isMuted ? 1 : 0}&loop=1&playlist=${playlist}&controls=0`}
+          title="YouTube Shorts"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen>
+        </iframe>
       </div>
     </div>
   );
@@ -658,7 +737,7 @@ export default function App() {
             <div className="social-pills">
               {[
                 { icon: "thumb_up", label: "Facebook", href: "https://www.facebook.com/share/1BboSH6D5r/" },
-                { icon: "play_circle", label: "YouTube", href: "https://www.youtube.com" },
+                { icon: "play_circle", label: "YouTube", href: "https://https://www.youtube.com/channel/UCYsUXUewtNn41oHLejSWVmQ.youtube.com" },
                 { icon: "chat", label: "WhatsApp", href: "https://wa.me/917602767952" },
               ].map(s => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="social-pill">
@@ -729,6 +808,7 @@ export default function App() {
       </footer>
 
       {showModal && <UnlockModal onClose={() => setShowModal(false)} />}
+      <FloatingShorts />
     </div>
   );
 }
