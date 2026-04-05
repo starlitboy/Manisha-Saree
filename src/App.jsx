@@ -211,8 +211,8 @@ function SareeScroller() {
       const vw = el.clientWidth;
       setVpW(vw);
       if (window.innerWidth <= 540) {
-        // Mobile: arrows hidden, use full width — centre card = ~65% of vw
-        setCardW(Math.max(80, Math.floor(vw * 0.65)));
+        // Mobile: arrows hidden, centre card = 65% vw, max 240px (height ≤ 432px)
+        setCardW(Math.max(80, Math.min(240, Math.floor(vw * 0.65))));
       } else if (window.innerWidth <= 900) {
         setCardW(170);
       } else {

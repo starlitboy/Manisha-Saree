@@ -468,7 +468,7 @@
   background: linear-gradient(160deg, #1a0a10 0%, #2d0a16 50%, #1a1a2e 100%);
   padding: 80px 0 64px;
   position: relative;
-  overflow: hidden;
+  overflow: hidden;   /* prevents lifted card from bleeding below section */
 }
 .scroller-section::before {
   content: '';
@@ -788,8 +788,8 @@
   .scroller-section  { padding: 50px 0; }
   .scroller-stage    { padding: 0; }          /* viewport fills edge to edge */
   .scroller-arrow    { display: none; }       /* hidden — swipe is enough */
-  /* 60%vw card × 1.8 ≈ 400px on 430px screen; add lift + padding */
-  .scroller-viewport { height: 430px; }
+  /* 75vh gives enough room for card (max 432px) + lift + dots */
+  .scroller-viewport { height: 75vh; max-height: 460px; }
   /* shrink card info so it doesn't overwhelm the card */
   .scroller-card-label  { font-size: 8px;  letter-spacing: 0.5px; }
   .scroller-card-name   { font-size: 12px; }
